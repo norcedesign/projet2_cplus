@@ -3,12 +3,11 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-
 #include <chrono>
 #include <ctime>
 #include <time.h>
 #include <iomanip>
-#include <iostream>
+#include <ostream>
 #include "../UptimeCpp/TimeConverter.h"
 #include <vector>
 using namespace std;
@@ -26,13 +25,11 @@ int main()
     string ligneText;
     int i = 1;
 
-    TimeConverter* tc = new TimeConverter();
+    auto tc = new TimeConverter();
 
     // lire ligne par ligne
     while (getline(myFile, ligneText)) {
-
-        // istringstream str("15005117.05 6945200.26");
-        //cout << "***Cas no. " << i << "**\n";
+        
         istringstream str(ligneText);
         vector<double> array;
         double temp;

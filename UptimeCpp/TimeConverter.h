@@ -4,9 +4,9 @@ using namespace std;
 class TimeConverter
 {
     public:
-        string ConvertSectoTimeString(double d) {
+        string ConvertSectoTimeString(double d) const  {
             d = d + 0.5 - (d < 0);
-            int n = int(d);
+            auto n = int(d);
 
             int day = n / (24 * 3600);
 
@@ -14,13 +14,9 @@ class TimeConverter
             int hour = n / 3600;
 
             n %= 3600;
-            int minutes = n / 60;
+            int minutes = n / 60;            
 
-            n %= 60;
-            int seconds = n;
-
-
-            string s1 = ""; //  day + "day";
+            string s1 = ""; 
             if (day == 1) {
                 s1 = to_string(day) + " day, ";
             }
@@ -32,8 +28,7 @@ class TimeConverter
             if (hour < 1) {
                 s2 = to_string(minutes) + " min";
             }
-            else {
-                //s2 = to_string(hour) + ":" + to_string(minutes);
+            else {              
                 ostringstream oss;
                 oss << setfill('0') << setw(2) << hour << ":";
                 oss << setfill('0') << setw(2) << minutes;
