@@ -7,6 +7,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UptimeCpp", "UptimeCpp\Upti
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UptimeTest", "UptimeTest\UptimeTest.vcxproj", "{1D548128-A688-4D3A-96F6-20E858B88AE8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{57DFC24C-A945-4C46-8350-8626A2ABF3A6}"
+	ProjectSection(SolutionItems) = preProject
+		Makefile.mk = Makefile.mk
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
